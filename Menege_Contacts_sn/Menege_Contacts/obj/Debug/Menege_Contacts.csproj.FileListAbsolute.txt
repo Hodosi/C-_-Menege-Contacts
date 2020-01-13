@@ -1,0 +1,8 @@
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\bin\Debug\Menege_Contacts.exe
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\bin\Debug\Menege_Contacts.pdb
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.csprojAssemblyReference.cache
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.NewFolder1.Login_Register_Form.resources
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Properties.Resources.resources
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.csproj.GenerateResource.cache
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.exe
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.pdb
