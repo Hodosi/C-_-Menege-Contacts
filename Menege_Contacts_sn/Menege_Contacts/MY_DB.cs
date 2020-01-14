@@ -9,16 +9,13 @@ namespace Menege_Contacts
 {
     class MY_DB
     {
-        static public string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\bin\Debug\Menege_Clients_db.mdf;Integrated Security=True;Connect Timeout=30";
-
+        //static public string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\bin\Debug\Menege_Clients_db.mdf;Integrated Security = True; Connect Timeout = 30";
+        static public string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Menege_Clients_db.mdf;Integrated Security = True; Connect Timeout = 30";
         SqlConnection conn = new SqlConnection(connstring);
 
-        public SqlConnection getConnection
+        public SqlConnection getConnection()
         {
-            get
-            {
-                return conn;
-            }
+            return conn;
         }
 
         public void openConnection()

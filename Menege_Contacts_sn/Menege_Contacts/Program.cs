@@ -15,7 +15,17 @@ namespace Menege_Contacts
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menege_Contacts.NewFolder1.Login_Register_Form());
+            //Application.Run(new Menege_Contacts.NewFolder1.Login_Register_Form());
+
+            Menege_Contacts.NewFolder1.Login_Register_Form rf = new Menege_Contacts.NewFolder1.Login_Register_Form();
+            if (rf.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Form1());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

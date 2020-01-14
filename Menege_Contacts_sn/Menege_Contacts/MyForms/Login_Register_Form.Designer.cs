@@ -30,7 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_min_login = new System.Windows.Forms.Button();
+            this.button_Close_login = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_GoLogin = new System.Windows.Forms.Label();
+            this.label_GoRegister = new System.Windows.Forms.Label();
             this.button_register = new System.Windows.Forms.Button();
             this.button_browse = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,10 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_Close_login = new System.Windows.Forms.Button();
-            this.button_min_login = new System.Windows.Forms.Button();
-            this.label_GoRegister = new System.Windows.Forms.Label();
-            this.label_GoLogin = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -70,8 +70,32 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 676);
+            this.panel1.Size = new System.Drawing.Size(432, 676);
             this.panel1.TabIndex = 0;
+            // 
+            // button_min_login
+            // 
+            this.button_min_login.BackColor = System.Drawing.Color.DarkCyan;
+            this.button_min_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_min_login.Location = new System.Drawing.Point(239, 6);
+            this.button_min_login.Name = "button_min_login";
+            this.button_min_login.Size = new System.Drawing.Size(75, 36);
+            this.button_min_login.TabIndex = 2;
+            this.button_min_login.Text = "-";
+            this.button_min_login.UseVisualStyleBackColor = false;
+            this.button_min_login.Click += new System.EventHandler(this.button_min_login_Click);
+            // 
+            // button_Close_login
+            // 
+            this.button_Close_login.BackColor = System.Drawing.Color.DarkCyan;
+            this.button_Close_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Close_login.Location = new System.Drawing.Point(320, 6);
+            this.button_Close_login.Name = "button_Close_login";
+            this.button_Close_login.Size = new System.Drawing.Size(75, 36);
+            this.button_Close_login.TabIndex = 1;
+            this.button_Close_login.Text = "x";
+            this.button_Close_login.UseVisualStyleBackColor = false;
+            this.button_Close_login.Click += new System.EventHandler(this.button_Close_login_Click);
             // 
             // panel2
             // 
@@ -100,8 +124,34 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 628);
+            this.panel2.Size = new System.Drawing.Size(950, 628);
             this.panel2.TabIndex = 0;
+            // 
+            // label_GoLogin
+            // 
+            this.label_GoLogin.AutoSize = true;
+            this.label_GoLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_GoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_GoLogin.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_GoLogin.Location = new System.Drawing.Point(472, 577);
+            this.label_GoLogin.Name = "label_GoLogin";
+            this.label_GoLogin.Size = new System.Drawing.Size(288, 25);
+            this.label_GoLogin.TabIndex = 20;
+            this.label_GoLogin.Text = "<< Have an account yet? Log in";
+            this.label_GoLogin.Click += new System.EventHandler(this.label_GoLogin_Click);
+            // 
+            // label_GoRegister
+            // 
+            this.label_GoRegister.AutoSize = true;
+            this.label_GoRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_GoRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_GoRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_GoRegister.Location = new System.Drawing.Point(45, 577);
+            this.label_GoRegister.Name = "label_GoRegister";
+            this.label_GoRegister.Size = new System.Drawing.Size(349, 25);
+            this.label_GoRegister.TabIndex = 19;
+            this.label_GoRegister.Text = "Don\'t have an account yet? Sign up >>";
+            this.label_GoRegister.Click += new System.EventHandler(this.label_GoRegister_Click);
             // 
             // button_register
             // 
@@ -309,56 +359,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Account Login";
             // 
-            // button_Close_login
-            // 
-            this.button_Close_login.BackColor = System.Drawing.Color.DarkCyan;
-            this.button_Close_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Close_login.Location = new System.Drawing.Point(320, 6);
-            this.button_Close_login.Name = "button_Close_login";
-            this.button_Close_login.Size = new System.Drawing.Size(75, 36);
-            this.button_Close_login.TabIndex = 1;
-            this.button_Close_login.Text = "x";
-            this.button_Close_login.UseVisualStyleBackColor = false;
-            this.button_Close_login.Click += new System.EventHandler(this.button_Close_login_Click);
-            // 
-            // button_min_login
-            // 
-            this.button_min_login.BackColor = System.Drawing.Color.DarkCyan;
-            this.button_min_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_min_login.Location = new System.Drawing.Point(239, 6);
-            this.button_min_login.Name = "button_min_login";
-            this.button_min_login.Size = new System.Drawing.Size(75, 36);
-            this.button_min_login.TabIndex = 2;
-            this.button_min_login.Text = "-";
-            this.button_min_login.UseVisualStyleBackColor = false;
-            this.button_min_login.Click += new System.EventHandler(this.button_min_login_Click);
-            // 
-            // label_GoRegister
-            // 
-            this.label_GoRegister.AutoSize = true;
-            this.label_GoRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_GoRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_GoRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_GoRegister.Location = new System.Drawing.Point(45, 577);
-            this.label_GoRegister.Name = "label_GoRegister";
-            this.label_GoRegister.Size = new System.Drawing.Size(349, 25);
-            this.label_GoRegister.TabIndex = 19;
-            this.label_GoRegister.Text = "Don\'t have an account yet? Sign up >>";
-            this.label_GoRegister.Click += new System.EventHandler(this.label_GoRegister_Click);
-            // 
-            // label_GoLogin
-            // 
-            this.label_GoLogin.AutoSize = true;
-            this.label_GoLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_GoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_GoLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_GoLogin.Location = new System.Drawing.Point(472, 577);
-            this.label_GoLogin.Name = "label_GoLogin";
-            this.label_GoLogin.Size = new System.Drawing.Size(288, 25);
-            this.label_GoLogin.TabIndex = 20;
-            this.label_GoLogin.Text = "<< Have an account yet? Log in";
-            this.label_GoLogin.Click += new System.EventHandler(this.label_GoLogin_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 15;
@@ -373,10 +373,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 676);
+            this.ClientSize = new System.Drawing.Size(432, 676);
             this.Controls.Add(this.panel1);
             this.Name = "Login_Register_Form";
             this.Text = "Login_Register_Form";
+            this.Load += new System.EventHandler(this.Login_Register_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -389,6 +390,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button_min_login;
+        private System.Windows.Forms.Button button_Close_login;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label_GoLogin;
+        private System.Windows.Forms.Label label_GoRegister;
         private System.Windows.Forms.Button button_register;
         private System.Windows.Forms.Button button_browse;
         private System.Windows.Forms.Label label9;
@@ -408,11 +415,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_min_login;
-        private System.Windows.Forms.Button button_Close_login;
-        private System.Windows.Forms.Label label_GoLogin;
-        private System.Windows.Forms.Label label_GoRegister;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }
