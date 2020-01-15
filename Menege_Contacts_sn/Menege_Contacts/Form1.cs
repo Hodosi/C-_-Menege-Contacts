@@ -18,6 +18,8 @@ namespace Menege_Contacts
             InitializeComponent();
         }
         MY_DB db = new MY_DB();
+        USER user = new USER();
+        GROUP group = new GROUP();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -68,5 +70,34 @@ namespace Menege_Contacts
             Menege_Contacts.MyForms.Edit_User_Data user_Data = new Menege_Contacts.MyForms.Edit_User_Data();
             user_Data.ShowDialog();
         }
+
+        private void button_addNewGroup_Click(object sender, EventArgs e)
+        {
+            string gname = this.textBox_addGroupName.Text;
+
+            if (!gname.Trim().Equals(""))
+            {
+                if (!group.groupExists(gname, "add", GLOBAL.GlobalUserId))
+                {
+                    if (group.insertGroup(gname, GLOBAL.GlobalUserId))
+                    {
+                        MessageBox.Show("Group Added Successfully", "Add Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something Wrong", "Add Group", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This Group already exists, try another one", "Add Group", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a group name", "Add Group", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
     }
 }

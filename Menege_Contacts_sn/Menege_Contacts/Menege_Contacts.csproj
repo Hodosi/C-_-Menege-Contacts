@@ -51,6 +51,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GLOBAL.cs" />
+    <Compile Include="GROUP.cs" />
     <Compile Include="MyForms\Edit_User_Data.cs">
       <SubType>Form</SubType>
     </Compile>

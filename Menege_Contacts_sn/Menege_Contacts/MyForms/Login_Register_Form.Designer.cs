@@ -376,6 +376,7 @@
             this.ClientSize = new System.Drawing.Size(432, 676);
             this.Controls.Add(this.panel1);
             this.Name = "Login_Register_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Register_Form";
             this.Load += new System.EventHandler(this.Login_Register_Form_Load);
             this.panel1.ResumeLayout(false);

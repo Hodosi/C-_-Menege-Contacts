@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_flastname = new System.Windows.Forms.TextBox();
+            this.textBox_lastname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_firstname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox_username);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox_flastname);
+            this.panel2.Controls.Add(this.textBox_lastname);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox_firstname);
             this.panel2.Controls.Add(this.label1);
@@ -115,6 +115,7 @@
             this.button_Edit_user_Data.TabIndex = 10;
             this.button_Edit_user_Data.Text = "Edit";
             this.button_Edit_user_Data.UseVisualStyleBackColor = false;
+            this.button_Edit_user_Data.Click += new System.EventHandler(this.button_Edit_user_Data_Click);
             // 
             // textBox_password
             // 
@@ -154,13 +155,13 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Username:";
             // 
-            // textBox_flastname
+            // textBox_lastname
             // 
-            this.textBox_flastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_flastname.Location = new System.Drawing.Point(573, 125);
-            this.textBox_flastname.Name = "textBox_flastname";
-            this.textBox_flastname.Size = new System.Drawing.Size(290, 34);
-            this.textBox_flastname.TabIndex = 5;
+            this.textBox_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_lastname.Location = new System.Drawing.Point(573, 125);
+            this.textBox_lastname.Name = "textBox_lastname";
+            this.textBox_lastname.Size = new System.Drawing.Size(290, 34);
+            this.textBox_lastname.TabIndex = 5;
             // 
             // label2
             // 
@@ -242,7 +243,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_flastname;
+        private System.Windows.Forms.TextBox textBox_lastname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_firstname;
         private System.Windows.Forms.Label label1;

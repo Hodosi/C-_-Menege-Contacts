@@ -58,7 +58,7 @@ namespace Menege_Contacts.NewFolder1
                 MemoryStream pic = new MemoryStream();
                 this.pictureBox_profile_img.Image.Save(pic, this.pictureBox_profile_img.Image.RawFormat);
 
-                if (!user.usernameExists(usrn))
+                if (!user.usernameExists(usrn,"register",GLOBAL.GlobalUserId))
                 {
                     if (user.insertClients(fname, lname, usrn, pass, pic))
                     {
@@ -66,7 +66,7 @@ namespace Menege_Contacts.NewFolder1
                     }
                     else
                     {
-                        MessageBox.Show("Shomthing Wrong", "Register", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Something Wrong", "Register", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -130,7 +130,6 @@ namespace Menege_Contacts.NewFolder1
                 label_GoRegister.Enabled = false;
             }
         }
-
 
         //only the login part
         private void timer2_Tick(object sender, EventArgs e)

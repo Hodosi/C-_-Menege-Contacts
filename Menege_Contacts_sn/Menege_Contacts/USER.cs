@@ -12,11 +12,23 @@ namespace Menege_Contacts
     {
         MY_DB db = new MY_DB();
 
-        public bool usernameExists(string username)
+        public bool usernameExists(string username,string operation,int userid=0)
         {
-            string query = "select * from Users where Username = @un ";
-            SqlCommand command = new SqlCommand(query, db.getConnection());
+            string query = "";
+            SqlCommand command = new SqlCommand();
+            if (operation == "register")
+            {
+                query = "select * from Users where Username = @un ";
+                command = new SqlCommand(query, db.getConnection());
+            }
+            else if(operation == "edit")
+            {
+                query = "select * from Users where Username = @un and IdUser <> @id ";
+                command = new SqlCommand(query, db.getConnection());
+                command.Parameters.Add("@id", SqlDbType.Int).Value = userid;
+            }
 
+            //command.Parameters.Add("@id", SqlDbType.Int).Value = userid;
             command.Parameters.Add("un", SqlDbType.VarChar).Value = username;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -104,6 +116,32 @@ namespace Menege_Contacts
             }
         }
 
+        public bool updateClients(int id,string fn, string ln, string un, string pass, MemoryStream pic)
+        {
+            string query = "UPDATE Users SET First_Name=@fn,Last_Name=@ln,Username=@us,Password=@pass,Picture=@pic WHERE IdUser=@usid";
+            SqlCommand command = new SqlCommand(query, db.getConnection());
+
+            command.Parameters.Add("fn", SqlDbType.VarChar).Value = fn;
+            command.Parameters.Add("ln", SqlDbType.VarChar).Value = ln;
+            command.Parameters.Add("us", SqlDbType.VarChar).Value = un;
+            command.Parameters.Add("pass", SqlDbType.VarChar).Value = pass;
+            command.Parameters.Add("pic", SqlDbType.Image).Value = pic.ToArray();
+            command.Parameters.Add("usid", SqlDbType.Int).Value = id;
+
+            db.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.clsoeConnection();
+                return true;
+            }
+            else
+            {
+                db.clsoeConnection();
+                return false;
+            }
+        }
+
         public DataTable getUserData(int id)
         {
             string query = "select * from Users where IdUser=@id";
@@ -120,7 +158,5 @@ namespace Menege_Contacts
 
             return table;
         }
-
-
     }
 }
