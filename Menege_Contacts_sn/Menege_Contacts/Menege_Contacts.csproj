@@ -52,6 +52,12 @@
     </Compile>
     <Compile Include="GLOBAL.cs" />
     <Compile Include="GROUP.cs" />
+    <Compile Include="MyForms\Add_Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForms\Add_Contact.Designer.cs">
+      <DependentUpon>Add_Contact.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForms\Edit_User_Data.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="USER.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForms\Add_Contact.resx">
+      <DependentUpon>Add_Contact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForms\Edit_User_Data.resx">
       <DependentUpon>Edit_User_Data.cs</DependentUpon>

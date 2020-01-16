@@ -33,7 +33,52 @@ namespace Menege_Contacts
                 return false;
             }
         }
-        public bool groupExists(string gname, string operation, int userid=0,int gid=0)
+
+        public bool updateGroup(string gname, int group_id, int uid)
+        {
+            string query = "UPDATE Groups SET Name=@gn WHERE UserId=@uid and IdGroup=@ig";
+            SqlCommand command = new SqlCommand(query, db.getConnection());
+
+            command.Parameters.Add("gn", SqlDbType.VarChar).Value = gname;
+            command.Parameters.Add("uid", SqlDbType.Int).Value = uid;
+            command.Parameters.Add("ig", SqlDbType.Int).Value = group_id;
+
+            db.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.clsoeConnection();
+                return true;
+            }
+            else
+            {
+                db.clsoeConnection();
+                return false;
+            }
+        }
+
+        public bool deleteGroup(int gi)
+        {
+            string query = "DELETE FROM Groups WHERE IdGroup = @gi";
+            SqlCommand command = new SqlCommand(query, db.getConnection());
+
+            command.Parameters.Add("gi", SqlDbType.Int).Value = gi;
+
+            db.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.clsoeConnection();
+                return true;
+            }
+            else
+            {
+                db.clsoeConnection();
+                return false;
+            }
+        }
+
+        public bool groupExists(string gname, string operation, int userid = 0, int gid = 0)
         {
             string query = "";
             SqlCommand command = new SqlCommand();
@@ -44,7 +89,7 @@ namespace Menege_Contacts
             }
             else if (operation == "edit")
             {
-                query = "select * from Groups where Name = @gn and IdUser = @id and IdGroup <> @gid ";
+                query = "select * from Groups where Name = @gn and UserId = @uid and IdGroup <> @gid ";
                 command = new SqlCommand(query, db.getConnection());
                 command.Parameters.Add("gid", SqlDbType.Int).Value = gid;
             }
@@ -66,6 +111,23 @@ namespace Menege_Contacts
             {
                 return false;
             }
+        }
+
+        public DataTable getGroup(int id)
+        {
+            string query = "SELECT * FROM Groups where UserId=@id";
+            SqlCommand command = new SqlCommand(query, db.getConnection());
+
+            command.Parameters.Add("id", SqlDbType.Int).Value = id;
+
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return table;
+
         }
     }
 }

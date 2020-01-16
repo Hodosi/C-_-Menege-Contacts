@@ -8,3 +8,4 @@ D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_C
 D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.pdb
 D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Form1.resources
 D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.MyForms.Edit_User_Data.resources
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.MyForms.Add_Contact.resources
