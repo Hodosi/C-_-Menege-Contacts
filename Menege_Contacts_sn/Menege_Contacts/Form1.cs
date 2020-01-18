@@ -29,13 +29,13 @@ namespace Menege_Contacts
 
         public void getGroups()
         {
-            this.comboBox_editGroup.DataSource = group.getGroup(GLOBAL.GlobalUserId);
-            comboBox_editGroup.DisplayMember = "Name";
-            comboBox_editGroup.ValueMember = "IdGroup";
+            this.comboBox_editGroup1.DataSource = group.getGroup(GLOBAL.GlobalUserId);
+            comboBox_editGroup1.DisplayMember = "Name";
+            comboBox_editGroup1.ValueMember = "IdGroup";
 
-            this.comboBox_DeleteGroup.DataSource = group.getGroup(GLOBAL.GlobalUserId);
-            comboBox_DeleteGroup.DisplayMember = "Name";
-            comboBox_DeleteGroup.ValueMember = "IdGroup";
+            this.comboBox_DeleteGroup1.DataSource = group.getGroup(GLOBAL.GlobalUserId);
+            comboBox_DeleteGroup1.DisplayMember = "Name";
+            comboBox_DeleteGroup1.ValueMember = "IdGroup";
         }
 
         private void button_Close_login_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace Menege_Contacts
 
         private void button_addNewGroup_Click(object sender, EventArgs e)
         {
-            string gname = this.textBox_addGroupName.Text;
+            string gname = this.textBox_addGroupName1.Text;
 
             if (!gname.Trim().Equals(""))
             {
@@ -121,8 +121,8 @@ namespace Menege_Contacts
         {
             try
             {
-                string new_gname = this.textBox_newGropuname.Text;
-                int group_id = Convert.ToInt32(this.comboBox_editGroup.SelectedValue.ToString());
+                string new_gname = this.textBox_newGropuname1.Text;
+                int group_id = Convert.ToInt32(this.comboBox_editGroup1.SelectedValue.ToString());
 
                 if (!new_gname.Trim().Equals(""))
                 {
@@ -159,7 +159,7 @@ namespace Menege_Contacts
         {
             try
             {
-                int group_id = Convert.ToInt32(this.comboBox_DeleteGroup.SelectedValue.ToString());
+                int group_id = Convert.ToInt32(this.comboBox_DeleteGroup1.SelectedValue.ToString());
 
                 if (MessageBox.Show("Are you sure?", "Delete Group", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
@@ -184,6 +184,27 @@ namespace Menege_Contacts
         {
             Menege_Contacts.MyForms.Add_Contact cont = new Menege_Contacts.MyForms.Add_Contact();
             cont.Show(this);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            button_addNewGroup_Click(sender, e);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            button_editGroup_Click(sender, e);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button_DeleteGroup_Click(sender, e);
+        }
+
+        private void button_EditContact_Click(object sender, EventArgs e)
+        {
+            Edit_Contact ec = new Edit_Contact();
+            ec.ShowDialog();
         }
     }
 }
