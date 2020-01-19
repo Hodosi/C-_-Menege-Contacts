@@ -51,6 +51,12 @@
       <DependentUpon>Add_Contact.cs</DependentUpon>
     </Compile>
     <Compile Include="CONTACT.cs" />
+    <Compile Include="Contact_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact_List.Designer.cs">
+      <DependentUpon>Contact_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_Contact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="USER.cs" />
     <EmbeddedResource Include="Add_Contact.resx">
       <DependentUpon>Add_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact_List.resx">
+      <DependentUpon>Contact_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Contact.resx">
       <DependentUpon>Edit_Contact.cs</DependentUpon>

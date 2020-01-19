@@ -20,6 +20,7 @@ namespace Menege_Contacts
         MY_DB db = new MY_DB();
         USER user = new USER();
         GROUP group = new GROUP();
+        CONTACT contact = new CONTACT();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -205,6 +206,50 @@ namespace Menege_Contacts
         {
             Edit_Contact ec = new Edit_Contact();
             ec.ShowDialog();
+        }
+
+        private void button_SelContact_Click(object sender, EventArgs e)
+        {
+            Select_Contact_Form sc = new Select_Contact_Form();
+            sc.ShowDialog();
+
+            int idContact = Convert.ToInt32(sc.dataGridView1.CurrentRow.Cells[0].Value.ToString());
+
+            this.textBox_ci.Text = idContact.ToString();
+        }
+
+        private void button_RemoveContact_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!this.textBox_ci.Text.Trim().Equals(""))
+                {
+                    int c_id = Convert.ToInt32(this.textBox_ci.Text);
+                    if (contact.deleteContact(c_id))
+                    {
+                            MessageBox.Show("Group Edited Successfully", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Select a Contact", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please Select a Contact", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_Show_Contacts_Click(object sender, EventArgs e)
+        {
+            Contact_List cl = new Contact_List();
+            cl.ShowDialog();
         }
     }
 }

@@ -22,3 +22,6 @@ D:\Desktop\Menege Contacts 1\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege
 D:\Desktop\Menege Contacts 1\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.csproj.GenerateResource.cache
 D:\Desktop\Menege Contacts 1\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Edit_Contact.resources
 D:\Desktop\Menege Contacts 1\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Select_Contact_Form.resources
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Edit_Contact.resources
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Select_Contact_Form.resources
+D:\Desktop\Menege Contacts\Menege_Contacts_sn\Menege_Contacts\obj\Debug\Menege_Contacts.Contact_List.resources

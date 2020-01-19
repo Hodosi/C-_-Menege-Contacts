@@ -38,8 +38,8 @@
             this.button_Close_login = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button_Contact = new System.Windows.Forms.Button();
+            this.textBox_ci = new System.Windows.Forms.TextBox();
+            this.button_SelContact = new System.Windows.Forms.Button();
             this.button_Show_Contacts = new System.Windows.Forms.Button();
             this.button_RemoveContact = new System.Windows.Forms.Button();
             this.button_EditContact = new System.Windows.Forms.Button();
@@ -211,8 +211,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkCyan;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.button_Contact);
+            this.panel4.Controls.Add(this.textBox_ci);
+            this.panel4.Controls.Add(this.button_SelContact);
             this.panel4.Controls.Add(this.button_Show_Contacts);
             this.panel4.Controls.Add(this.button_RemoveContact);
             this.panel4.Controls.Add(this.button_EditContact);
@@ -229,23 +229,24 @@
             this.panel4.Size = new System.Drawing.Size(998, 629);
             this.panel4.TabIndex = 8;
             // 
-            // textBox3
+            // textBox_ci
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(210, 432);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 34);
-            this.textBox3.TabIndex = 11;
+            this.textBox_ci.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ci.Location = new System.Drawing.Point(210, 432);
+            this.textBox_ci.Name = "textBox_ci";
+            this.textBox_ci.Size = new System.Drawing.Size(167, 34);
+            this.textBox_ci.TabIndex = 11;
             // 
-            // button_Contact
+            // button_SelContact
             // 
-            this.button_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Contact.Location = new System.Drawing.Point(209, 391);
-            this.button_Contact.Name = "button_Contact";
-            this.button_Contact.Size = new System.Drawing.Size(167, 38);
-            this.button_Contact.TabIndex = 10;
-            this.button_Contact.Text = "Select Contact";
-            this.button_Contact.UseVisualStyleBackColor = true;
+            this.button_SelContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SelContact.Location = new System.Drawing.Point(209, 391);
+            this.button_SelContact.Name = "button_SelContact";
+            this.button_SelContact.Size = new System.Drawing.Size(167, 38);
+            this.button_SelContact.TabIndex = 10;
+            this.button_SelContact.Text = "Select Contact";
+            this.button_SelContact.UseVisualStyleBackColor = true;
+            this.button_SelContact.Click += new System.EventHandler(this.button_SelContact_Click);
             // 
             // button_Show_Contacts
             // 
@@ -256,6 +257,7 @@
             this.button_Show_Contacts.TabIndex = 9;
             this.button_Show_Contacts.Text = "Show Full List";
             this.button_Show_Contacts.UseVisualStyleBackColor = true;
+            this.button_Show_Contacts.Click += new System.EventHandler(this.button_Show_Contacts_Click);
             // 
             // button_RemoveContact
             // 
@@ -266,6 +268,7 @@
             this.button_RemoveContact.TabIndex = 8;
             this.button_RemoveContact.Text = "Remove";
             this.button_RemoveContact.UseVisualStyleBackColor = true;
+            this.button_RemoveContact.Click += new System.EventHandler(this.button_RemoveContact_Click);
             // 
             // button_EditContact
             // 
@@ -387,6 +390,7 @@
             // 
             // comboBox_editGroup1
             // 
+            this.comboBox_editGroup1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.comboBox_editGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_editGroup1.FormattingEnabled = true;
             this.comboBox_editGroup1.Location = new System.Drawing.Point(182, 35);
@@ -720,8 +724,8 @@
         private System.Windows.Forms.Label label_Refresh;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button_Contact;
+        private System.Windows.Forms.TextBox textBox_ci;
+        private System.Windows.Forms.Button button_SelContact;
         private System.Windows.Forms.Button button_Show_Contacts;
         private System.Windows.Forms.Button button_RemoveContact;
         private System.Windows.Forms.Button button_EditContact;
